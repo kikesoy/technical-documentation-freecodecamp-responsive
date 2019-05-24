@@ -1,0 +1,166 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans|Share+Tech+Mono");
+@import url("https://use.fontawesome.com/releases/v5.3.1/css/all.css");
+html,
+body,
+div,
+nav,
+main,
+section,
+header,
+pre,
+code,
+a,
+p,
+blockquote {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+  color: #757d7c;
+  font-size: 1rem;
+}
+pre {
+  width: 100%;
+  overflow: hidden;
+  overflow-x: auto;
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+}
+pre code {
+  color: #ff3e00;
+  margin-bottom: 0;
+}
+code {
+  background: #e3e9e8;
+  color: #ff3e00;
+  padding: 1rem;
+  display: inline-block;
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+  font-family: "Share Tech Mono", monospace;
+}
+p,
+ol,
+ul {
+  margin-bottom: 1rem;
+}
+a {
+  text-decoration: none;
+  transition: all 0.25s ease;
+}
+header {
+  margin-bottom: 1rem;
+  line-height: 1;
+}
+.main-section {
+  padding-bottom: 2rem;
+  margin-bottom: 2rem;
+  border-bottom: 1px solid #e3e9e8;
+}
+.main-section:target:before {
+  content: "";
+  display: block;
+  height: 300px; /* fixed header height*/
+  margin: -300px 0 0; /* negative fixed header height */
+}
+blockquote {
+  padding: 2rem;
+  margin: 0 4rem 1rem 2rem;
+  background: #ff3e00;
+  color: #fff;
+  border-left: 10px solid #757d7c;
+}
+h3 {
+  font-size: 3rem;
+}
+.lead {
+  font-size: 150%;
+}
+#navbar {
+  position: fixed;
+  display: block;
+  top: 0;
+  left: 0;
+  width: 100%;
+  border-right: none;
+  background: #fff;
+  box-shadow: 0 0 3rem rgba(0, 0, 0, 0.75);
+}
+#navbar header {
+  font-size: 2rem;
+  padding: 2rem;
+  margin-bottom: 0;
+  background: #757d7c;
+  color: #fff;
+}
+#navbar .nav-navbar {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  overflow-y: auto;
+}
+#navbar .nav-link {
+  display: block;
+  padding: 1rem 2rem;
+  border-bottom: 1px solid #e3e9e8;
+  color: #757d7c;
+}
+#navbar .nav-link:hover {
+  background: #e3e9e8;
+  color: #757d7c;
+}
+#main-doc {
+  display: block;
+  margin-top: 300px;
+  padding: 2rem 4rem;
+}
+#main-doc section {
+  padding-bottom: 2rem;
+}
+#main-doc header {
+  font-size: 4rem;
+}
+#back_to_top {
+  position: fixed;
+  height: 2rem;
+  width: 2rem;
+  bottom: 1rem;
+  right: 1rem;
+}
+#back_to_top a {
+  background: #ff3e00;
+  color: #fff;
+  display: block;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+#back_to_top a:hover {
+  background: #757d7c;
+}
+#back_to_top a i {
+  color: inherit;
+  line-height: 2rem;
+}
+/* --- MEDIA QUERIES --- */
+@media (min-width: 700px) {
+  #navbar {
+    width: 300px;
+    height: 100%;
+    border-right: 1px solid #e3e9e8;
+    box-shadow: none;
+  }
+  #navbar .nav-navbar {
+    height: auto;
+    overflow: visible;
+    overflow-y: none;
+  }
+  #main-doc {
+    margin-left: 300px;
+    margin-top: 0;
+  }
+  #main-doc section:before {
+    display: none;
+  }
+}
